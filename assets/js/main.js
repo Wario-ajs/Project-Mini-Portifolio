@@ -5,30 +5,30 @@ const projectContent = document.querySelector('.projects__content');
 const skillsContent = document.querySelector('.skills__content');
 
 tabsProject.addEventListener('click', () => {
-    projectContent.classList.toggle('filters__active')
+    projectContent.classList.add('filters__active')
 })
 
 tabsProject.addEventListener('click', () => {
-    skillsContent.classList.toggle('filters__active')
+    skillsContent.classList.remove('filters__active')
 })
 
 tabsSkills.addEventListener('click', () => {
-    projectContent.classList.toggle('filters__active')
+    projectContent.classList.remove('filters__active')
 })
 
 tabsSkills.addEventListener('click', () => {
-    skillsContent.classList.toggle('filters__active')
+    skillsContent.classList.add('filters__active')
 })
 
-/*
+
+const tabs = document.querySelectorAll('[data-target]'),
+    tabContents = document.querySelectorAll('[data-content]')
+
 tabs.forEach(tab =>{
     tab.addEventListener('click', () =>{
-        const target = document.querySelector(tab.dataset.target)
-
-        tabContents.forEach(tc =>{
-            tc.classList.remove('filters__active')
+        tabs.forEach(t =>{
+            t.classList.remove('filter-tab-active')
         })
-        target.classList.add('filter__active')
     })
 })
 
