@@ -269,7 +269,8 @@ body.dark-theme{
   .button__gray:hover {
     background-color: var(--text-color-light);
   }
-/*=============== FILTERS TABS ===============*/
+
+/*=============== TABS ===============*/
 .filters__content {
     margin: 2rem 0 2.5rem;
     background-color: var(--text-color-lighten);
